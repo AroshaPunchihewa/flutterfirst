@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:signup/constants.dart';
+
+class SocalIcon extends StatelessWidget {
+  final String iconSrc;
+  final Function press;
+  const SocalIcon({
+    Key? key,
+    required this.iconSrc,
+    required this.press,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: press(),
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 50),
+        padding: EdgeInsets.all(2),
+        decoration: BoxDecoration(
+          border: Border.all(
+            width: 2,
+            color: kPrimaryLightColor,
+          ),
+          shape: BoxShape.circle,
+        ),
+        child: Image.asset(
+          iconSrc,
+          height: 50,
+          width: 50,
+        ),
+      ),
+    );
+  }
+}
