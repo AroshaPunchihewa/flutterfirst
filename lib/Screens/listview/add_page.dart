@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:signup/Screens/Signup/components/background.dart';
+import 'package:signup/constants.dart';
 
 class AddStudentPage extends StatefulWidget {
   const AddStudentPage({super.key});
@@ -19,6 +21,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Add Student'),
+        backgroundColor: kPrimaryColor,
       ),
       body: ListView(
         padding: EdgeInsets.all(20),
@@ -39,6 +42,9 @@ class _AddStudentPageState extends State<AddStudentPage> {
           ElevatedButton(
             onPressed: submitData,
             child: Text('Submit'),
+            style: ElevatedButton.styleFrom(
+              primary: kPrimaryColor,
+            ),
           )
         ],
       ),

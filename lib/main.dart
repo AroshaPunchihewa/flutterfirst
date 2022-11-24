@@ -33,10 +33,9 @@ class MyHomePage extends StatelessWidget {
       drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('Side menu'),
+        backgroundColor: Colors.white,
       ),
-      body: Center(
-        child: Text('Side Menu Tutorial'),
-      ),
+      body: WelcomeScreen(),
     );
   }
 }

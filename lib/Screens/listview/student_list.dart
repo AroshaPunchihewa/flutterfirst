@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:signup/Screens/listview/add_page.dart';
+import 'package:signup/constants.dart';
+import 'package:signup/navbar.dart';
 
 class StudentListPage extends StatefulWidget {
   const StudentListPage({super.key});
@@ -22,8 +24,10 @@ class _StudentListPageState extends State<StudentListPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('Student List'),
+        backgroundColor: kPrimaryColor,
       ),
       body: ListView.builder(
         itemCount: items.length,
@@ -40,6 +44,7 @@ class _StudentListPageState extends State<StudentListPage> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: navigateToAddPage,
         label: Text('Add Student'),
+        backgroundColor: kPrimaryColor,
       ),
     );
   }
